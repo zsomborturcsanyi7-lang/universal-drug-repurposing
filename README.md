@@ -2,7 +2,7 @@
 
 > **In silico discovery of Nilotinib_Var_17 — a broad-spectrum protein binder validated across 5 therapeutically relevant targets.**
 >
-> Independent research project | Horváth János | 2024-2026
+> Independent research project | Turcsányi Zsombor & Hermes AI | 2024-2026
 
 [![Python](https://img.shields.io/badge/Python-3.12-blue)](https://www.python.org/)
 [![RDKit](https://img.shields.io/badge/RDKit-2024-green)](https://www.rdkit.org/)
@@ -231,7 +231,7 @@ We are actively seeking **academic partners** for:
 Institutions with **BSL-2+ laboratory capabilities** and experience in enzymology or cell-based assays are ideal.
 
 **Contact:** [GitHub Issues](https://github.com/horvatjanos/universal-drug-repurposing/issues)  
-**PI:** Horváth János — [GitHub](https://github.com/horvatjanos)
+**Authors:** Turcsányi Zsombor & Hermes AI — [GitHub](https://github.com/horvatjanos)
 
 ---
 
@@ -257,7 +257,7 @@ If you use this work in your research, please cite:
 ```bibtex
 @misc{horvath2026drugrepurposing,
   title   = {AI Drug Repurposing: Multi-Target Virtual Screening Platform},
-  author  = {Horváth, János},
+  author  = {Turcsányi, Zsombor and Hermes AI},
   year    = {2026},
   url     = {https://github.com/horvatjanos/universal-drug-repurposing}
 }
