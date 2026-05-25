@@ -11,7 +11,7 @@
 
 ---
 
-## 🔬 Abstract
+## Abstract
 
 This project presents an integrated computational pipeline for **structure-based drug repurposing** — the identification of existing FDA-approved drugs that can be redirected against novel protein targets. Using a combination of machine learning-based pre-screening and molecular docking with AutoDock Vina, we screened drug candidates against **5 therapeutically relevant protein targets** and identified **Nilotinib_Var_17** as a promising multi-target binder.
 
@@ -19,7 +19,7 @@ Our key finding: Nilotinib_Var_17 — a computationally optimized derivative of 
 
 ---
 
-## 🎯 Research Objectives
+## Research Objectives
 
 1. Develop an **automated virtual screening pipeline** requiring no expert bioinformatics knowledge
 2. Validate the pipeline through **multi-receptor docking** across diverse protein families
@@ -28,7 +28,7 @@ Our key finding: Nilotinib_Var_17 — a computationally optimized derivative of 
 
 ---
 
-## 🧪 Key Finding: Nilotinib_Var_17
+## Key Finding: Nilotinib_Var_17
 
 ### Multi-Target Binding Profile
 
@@ -50,64 +50,64 @@ Cc1ccc(cc1Nc2nccc(n2)c3cccnc3)NC(=O)c4ccc(cc4C(F)(F)F)n5cc(cn5)C
 
 ---
 
-## 🏗️ Methodology
+## Methodology
 
 ### Pipeline Architecture
 
 ```
 PDB ID (e.g., 6LU7)
-    │
-    ▼
-┌──────────────────────────────────┐
-│ Receptor Preparation              │
-│ • RCSB PDB download              │
-│ • Water/heteroatom removal       │
-│ • Gasteiger charge assignment    │
-│ • PDB → PDBQT (OpenBabel)        │
-└──────────────────────────────────┘
-    │
-    ▼
-┌──────────────────────────────────┐
-│ Binding Site Detection            │
-│ • Reference ligand extraction    │
-│ • Blind cavity detection         │
-│ • FPocket integration (optional) │
-└──────────────────────────────────┘
-    │
-    ▼
-┌──────────────────────────────────┐
-│ AI Pre-Screening                  │
-│ • Morgan fingerprints (ECFP4/6)  │
-│ • 200+ RDKit molecular descriptors│
-│ • Random Forest / SVR prediction │
-│ • Top-N candidate selection      │
-└──────────────────────────────────┘
-    │
-    ▼
-┌──────────────────────────────────┐
-│ Lead Optimization (optional)      │
-│ • Methyl/fluoro scanning         │
-│ • Bioisostere replacement        │
-│ • BRICS fragment recombination   │
-│ • 50-200 variants per lead       │
-└──────────────────────────────────┘
-    │
-    ▼
-┌──────────────────────────────────┐
-│ Molecular Docking                 │
-│ • AutoDock Vina 1.2.7            │
-│ • Multi-core parallel execution  │
-│ • Exhaustiveness: 1-8            │
-│ • 9 binding modes per ligand     │
-└──────────────────────────────────┘
-    │
-    ▼
-┌──────────────────────────────────┐
-│ Results & Training                │
-│ • Affinity extraction & ranking  │
-│ • Model training (R²=0.63)       │
-│ • HTML/CSV report generation     │
-└──────────────────────────────────┘
+    
+    
+
+ Receptor Preparation              
+ • RCSB PDB download              
+ • Water/heteroatom removal       
+ • Gasteiger charge assignment    
+ • PDB → PDBQT (OpenBabel)        
+
+    
+    
+
+ Binding Site Detection            
+ • Reference ligand extraction    
+ • Blind cavity detection         
+ • FPocket integration (optional) 
+
+    
+    
+
+ AI Pre-Screening                  
+ • Morgan fingerprints (ECFP4/6)  
+ • 200+ RDKit molecular descriptors
+ • Random Forest / SVR prediction 
+ • Top-N candidate selection      
+
+    
+    
+
+ Lead Optimization (optional)      
+ • Methyl/fluoro scanning         
+ • Bioisostere replacement        
+ • BRICS fragment recombination   
+ • 50-200 variants per lead       
+
+    
+    
+
+ Molecular Docking                 
+ • AutoDock Vina 1.2.7            
+ • Multi-core parallel execution  
+ • Exhaustiveness: 1-8            
+ • 9 binding modes per ligand     
+
+    
+    
+
+ Results & Training                
+ • Affinity extraction & ranking  
+ • Model training (R²=0.63)       
+ • HTML/CSV report generation     
+
 ```
 
 ### Computational Details
@@ -132,7 +132,7 @@ PDB ID (e.g., 6LU7)
 
 ---
 
-## 📦 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -185,41 +185,41 @@ python src/train_multireceptor_v2.py
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
-├── src/                            Source code
-│   ├── hermes_drug.py              Main orchestrator (CLI + interactive)
-│   ├── receptor_prep.py            PDB fetch, clean, PDBQT conversion
-│   ├── auto_box.py                 Binding pocket auto-detection
-│   ├── screen_ai.py                AI-accelerated compound screening
-│   ├── optimize_lead.py            Lead optimization (variant generation)
-│   ├── prep_ligands.py             SMILES → 3D PDBQT (cross-platform)
-│   ├── parse_docking_results.py    Vina output parsing + ranking
-│   ├── train_multireceptor_v2.py   Multi-target ML training pipeline
-│   ├── train_advanced_model.py     Advanced ML (ChEMBL data integration)
-│   ├── train_ml_proxy.py           RandomForest affinity predictor
-│   ├── train_boosted_proxy.py      GradientBoosting affinity predictor
-│   ├── cloud_runner.py             Kaggle cloud acceleration
-│   └── ...                         Additional utility modules
-├── data/                           Compound libraries
-│   ├── full_fda_library.csv        51 FDA-approved drugs with SMILES
-│   ├── mpro_training_data.csv      669 ChEMBL SARS-CoV-2 Mpro bioactivities
-│   ├── training_set_50.csv         50 diverse training compounds
-│   └── nilotinib_variants.csv      50 Nilotinib structural variants
-├── docs/                           Documentation
-│   ├── README.md                   This file
-│   ├── GEMINI.md                   Original project specification
-│   ├── LICENSE                     MIT License
-│   └── letter_to_semmelweis.py     Academic collaboration proposal
-├── config.yaml                     Universal configuration
-├── requirements.txt                Python dependencies
-└── vina_1.2.7_win.exe              AutoDock Vina (Windows binary)
+ src/                            Source code
+    hermes_drug.py              Main orchestrator (CLI + interactive)
+    receptor_prep.py            PDB fetch, clean, PDBQT conversion
+    auto_box.py                 Binding pocket auto-detection
+    screen_ai.py                AI-accelerated compound screening
+    optimize_lead.py            Lead optimization (variant generation)
+    prep_ligands.py             SMILES → 3D PDBQT (cross-platform)
+    parse_docking_results.py    Vina output parsing + ranking
+    train_multireceptor_v2.py   Multi-target ML training pipeline
+    train_advanced_model.py     Advanced ML (ChEMBL data integration)
+    train_ml_proxy.py           RandomForest affinity predictor
+    train_boosted_proxy.py      GradientBoosting affinity predictor
+    cloud_runner.py             Kaggle cloud acceleration
+    ...                         Additional utility modules
+ data/                           Compound libraries
+    full_fda_library.csv        51 FDA-approved drugs with SMILES
+    mpro_training_data.csv      669 ChEMBL SARS-CoV-2 Mpro bioactivities
+    training_set_50.csv         50 diverse training compounds
+    nilotinib_variants.csv      50 Nilotinib structural variants
+ docs/                           Documentation
+    README.md                   This file
+    GEMINI.md                   Original project specification
+    LICENSE                     MIT License
+    letter_to_semmelweis.py     Academic collaboration proposal
+ config.yaml                     Universal configuration
+ requirements.txt                Python dependencies
+ vina_1.2.7_win.exe              AutoDock Vina (Windows binary)
 ```
 
 ---
 
-## 🤝 Seeking Collaboration
+## Seeking Collaboration
 
 We are actively seeking **academic partners** for:
 
@@ -235,7 +235,7 @@ Institutions with **BSL-2+ laboratory capabilities** and experience in enzymolog
 
 ---
 
-## 📚 Data Sources
+## Data Sources
 
 - **Protein structures:** RCSB Protein Data Bank (PDB IDs: 6LU7, 1HPV, 5KIR, 1M17, 4LVT)
 - **Bioactivity data:** ChEMBL (target: CHEMBL4523582 — SARS-CoV-2 Mpro)
@@ -244,13 +244,13 @@ Institutions with **BSL-2+ laboratory capabilities** and experience in enzymolog
 
 ---
 
-## 📄 License
+## License
 
 MIT License — see [LICENSE](LICENSE)
 
 ---
 
-## 📝 Citation
+## Citation
 
 If you use this work in your research, please cite:
 
