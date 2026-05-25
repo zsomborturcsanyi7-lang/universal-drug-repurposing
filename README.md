@@ -230,7 +230,7 @@ We are actively seeking **academic partners** for:
 
 Institutions with **BSL-2+ laboratory capabilities** and experience in enzymology or cell-based assays are ideal.
 
-**Contact:** [GitHub Issues](https://github.com/horvatjanos/universal-drug-repurposing/issues)  
+**Contact:** [GitHub Issues](https://github.com/horvatjanos/universal-drug-repurposing/issues) or zsomborturcsanyi7@gmail.com  
 **Authors:** Turcsányi Zsombor & Hermes AI — [GitHub](https://github.com/horvatjanos)
 
 ---
