@@ -19,7 +19,7 @@ An automated, scientifically-validated pipeline for computational drug repurposi
 *   **MD-Proxy Stability Analysis:** Evaluates docked pose strain energy to predict if a binding mode is physically realistic and stable.
 *   **Toxicity Filtering:** Integrated PAINS and Brenk filters to identify and remove reactive or interfering compounds.
 
-## 🔬 Scientific Validation
+##  Scientific Validation
 
 This platform enforces professional-grade pharmaceutical standards:
 1.  **Lipinski's Rule of Five:** Filters for bioavailability.
@@ -29,7 +29,7 @@ This platform enforces professional-grade pharmaceutical standards:
 5.  **Pose Strain Analysis (MD Proxy):** Ensures the docked geometry is physically stable and not energetically "forced".
 
 
-## 🛠️ Installation
+##  Installation
 
 1.  **Clone the repository:**
     ```bash
@@ -63,18 +63,18 @@ python src/hermes_drug.py --pdb 6LU7 --depth deep
 python src/cloud_runner.py --pdb 6LU7 --depth deep
 ```
 
-## 📂 Repository Structure
+##  Repository Structure
 
 *   `src/`: Core Python modules for screening, docking, and optimization.
 *   `data/`: Drug libraries, training sets, and ChEMBL exports.
 *   `targets/`: Processed protein structures and docking configuration.
 *   `docs/`: Detailed technical white paper and methodology guides.
 
-## ⚖️ License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🎓 Citation
+##  Citation
 
 If you use this platform in your research, please cite:
 ```bibtex
