@@ -78,7 +78,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you use this platform in your research, please cite:
 ```bibtex
-@software{horvat_hermes_2026,
+@software{Zsombi_hermes_2026,
   author = {Turcsányi Zsombor Leonard and Hermes AI},
   title = {AI Drug Repurposing: Multi-Target Virtual Screening Platform},
   year = {2026},
