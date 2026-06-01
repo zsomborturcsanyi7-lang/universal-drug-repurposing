@@ -15,7 +15,7 @@
 
 An automated, scientifically-validated pipeline for computational drug repurposing. This platform integrates Machine Learning pre-screening with high-precision Molecular Docking and Lead Optimization to identify potential therapeutic candidates for any protein target.
 
-## 🚀 Key Features
+##  Key Features
 
 *   **Automated Target Preparation:** Download and clean any PDB structure with a single command.
 *   **AI-Driven Pre-screening:** Rapidly filter drug libraries using ML affinity proxies.
@@ -23,14 +23,14 @@ An automated, scientifically-validated pipeline for computational drug repurposi
 *   **Scientific Lead Optimization:** Generate structural variants with built-in **QED**, **Lipinski**, and **Synthetic Accessibility** filters.
 *   **Cloud Ready:** Built-in support for pushing heavy docking workloads to Kaggle GPUs/CPUs.
 
-## 🔬 Scientific Validation
+##  Scientific Validation
 
 Unlike simpler simulation tools, this platform enforces strict drug-likeness criteria. Every optimized molecule is filtered for:
 *   **Lipinski's Rule of Five** (Molecular Weight, LogP, H-Bonding)
 *   **Quantitative Estimate of Drug-likeness (QED)**
 *   **Precision Docking (Exhaustiveness 32)** to minimize false positives.
 
-## 🛠️ Installation
+##  Installation
 
 1.  **Clone the repository:**
     ```bash
@@ -47,7 +47,7 @@ Unlike simpler simulation tools, this platform enforces strict drug-likeness cri
     *   [AutoDock Vina](https://github.com/ccsb-scripps/AutoDock-Vina)
     *   [OpenBabel](http://openbabel.org/) (for PDBQT conversion)
 
-## 📖 Usage
+##  Usage
 
 ### 1. Simple Screening (Standard)
 ```bash
@@ -64,18 +64,18 @@ python src/hermes_drug.py --pdb 6LU7 --depth deep
 python src/cloud_runner.py --pdb 6LU7 --depth deep
 ```
 
-## 📂 Repository Structure
+##  Repository Structure
 
 *   `src/`: Core Python modules for screening, docking, and optimization.
 *   `data/`: Drug libraries, training sets, and ChEMBL exports.
 *   `targets/`: Processed protein structures and docking configuration.
 *   `docs/`: Detailed technical white paper and methodology guides.
 
-## ⚖️ License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🎓 Citation
+##  Citation
 
 If you use this platform in your research, please cite:
 ```bibtex
