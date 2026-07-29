@@ -1,32 +1,29 @@
 # universal-drug-repurposing
 
-**Status:** ⚠️ Prototype — full pipeline validated, Kaggle GPU needed for full DrugBank run
+Automatizált molekuláris dokkolási és gépi tanulási szűrési pipeline gél- és gyógyszer-újrahasznosításhoz (AutoDock Vina).
 
-Complete automated drug repurposing platform: AutoDock Vina docking + ML proxy pre-screening. Receptor prep → docking → ML evaluation → report generation, all in one command.
+## 📌 A projekt célja
+A meglévő hatóanyag-adatbázisok automatizált szűrése célfehérjék ellen a potenciális új terápiás alkalmazások gyors azonosítására.
 
-**Note:** This is the main/comprehensive version. `drug-repurposing-pipeline` is a smaller overlapping repo with the same concept.
+## ⚙️ Technológiai stakk & Működés
+- **Nyelv**: Python
+- **Bioinformatika**: AutoDock Vina, RDKit, Biopython
+- **Gépi tanulás**: Scikit-Learn proxy modell szelektivitáshoz
 
-## ⚠️ THIS PROJECT IS UNFINISHED — FEEL FREE TO CONTINUE IT ⚠️
+## 🚀 Telepítés és Használat
 
-This project was developed by Zsombi & Hermes Agent (Nous Research).
+### Előfeltételek
+- Python 3.9+
+- AutoDock Vina telepítve
 
----
+### Lépések
+```bash
+git clone https://github.com/zsomborturcsanyi7-lang/universal-drug-repurposing.git
+cd universal-drug-repurposing
 
-## Pipeline
-1. **Receptor Preparation** — Download and clean PDB structures
-2. **Auto Box** — Automatic binding pocket detection
-3. **AI Screening** — ML proxy-based fast pre-screening
-4. **Ligand Preparation** — SMILES → 3D conformation → PDBQT
-5. **Parallel Docking** — Parallelized AutoDock Vina execution
-6. **Result Evaluation** — Ranking and report generation
+pip install -r requirements.txt
+python run_pipeline.py --receptor protein.pdbqt --ligands dataset.sdf
+```
 
-## Tech stack
-- AutoDock Vina 1.2.7
-- ML proxy (trained model)
-- Python pipeline, YAML config
-
-## Related
-- `drug-repurposing-pipeline` — Smaller overlapping version
-
-## Developer
-Zsombi & Hermes Agent (Nous Research)
+## 📊 Status
+⚠️ **In silico kísérleti pipeline**.
