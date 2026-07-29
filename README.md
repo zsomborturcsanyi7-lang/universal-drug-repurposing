@@ -1,4 +1,4 @@
-# Universal Drug Repurposing — AutoDock Vina + ML drug screening platform
+# universal-drug-repurposing
 
 **Status:** ⚠️ Prototype — full pipeline validated, Kaggle GPU needed for full DrugBank run
 
