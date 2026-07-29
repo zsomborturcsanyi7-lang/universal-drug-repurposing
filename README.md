@@ -1,22 +1,22 @@
 # universal-drug-repurposing
 
-Automatizált molekuláris dokkolási és gépi tanulási szűrési pipeline gél- és gyógyszer-újrahasznosításhoz (AutoDock Vina).
+Automated molecular docking and machine learning screening pipeline for drug repurposing (AutoDock Vina).
 
-## 📌 A projekt célja
-A meglévő hatóanyag-adatbázisok automatizált szűrése célfehérjék ellen a potenciális új terápiás alkalmazások gyors azonosítására.
+## 📌 Overview & Purpose
+Performs automated screening of existing drug databases against target receptor proteins to identify potential novel therapeutic applications.
 
-## ⚙️ Technológiai stakk & Működés
-- **Nyelv**: Python
-- **Bioinformatika**: AutoDock Vina, RDKit, Biopython
-- **Gépi tanulás**: Scikit-Learn proxy modell szelektivitáshoz
+## ⚙️ Tech Stack & Architecture
+- **Language**: Python
+- **Bioinformatics**: AutoDock Vina, RDKit, Biopython
+- **Machine Learning**: Scikit-Learn proxy model for rapid affinity estimation
 
-## 🚀 Telepítés és Használat
+## 🚀 Installation & Quickstart
 
-### Előfeltételek
+### Prerequisites
 - Python 3.9+
-- AutoDock Vina telepítve
+- AutoDock Vina binary installed
 
-### Lépések
+### Steps
 ```bash
 git clone https://github.com/zsomborturcsanyi7-lang/universal-drug-repurposing.git
 cd universal-drug-repurposing
@@ -25,5 +25,5 @@ pip install -r requirements.txt
 python run_pipeline.py --receptor protein.pdbqt --ligands dataset.sdf
 ```
 
-## 📊 Status
-⚠️ **In silico kísérleti pipeline**.
+## 📊 Project Status
+⚠️ **In Silico Experimental Pipeline**.
